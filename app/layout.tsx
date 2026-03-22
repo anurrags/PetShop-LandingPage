@@ -16,9 +16,6 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Saffron Paws | Premium Pet Care in India",
   description: "The ultimate haven for your pet's well-being. Professional grooming, vet care, and premium nutrition at Saffron Paws.",
-  icons: {
-    icon: "/icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -27,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${plusJakartaSans.variable} ${manrope.variable}`}>
         <Navbar />
         {children}
