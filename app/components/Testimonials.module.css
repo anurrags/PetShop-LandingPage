@@ -1,0 +1,88 @@
+.testimonials {
+  padding: 100px 0;
+  background: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.title span {
+  color: var(--primary);
+}
+
+.scrollContainer {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 2rem 0;
+  padding-left: calc(50% - 200px); /* Center first card (400px / 2) */
+  padding-right: calc(50% - 200px); /* Center last card */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  min-width: 400px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.name {
+  color: var(--on-surface);
+  line-height: 1.2;
+}
+
+.role {
+  font-size: 0.85rem;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--surface-highest);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background: var(--primary-light);
+}
+
+.dot.active {
+  background: var(--primary);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .card {
+    min-width: 300px;
+  }
+}
